@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Menú en CSS</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <style>
+            #menu {
+                /*position: tipo de posición a tomar;
+                position: static; -> posición por defecto en el código
+                position: relativ; -> el elemento se posiciona en relación a su posición natural. Con top, left, bottom y right podemos modificar cuanto se desplaza respecto a esa posición.
+                position: fixed; -> se queda fijo en esa posición aunque hagas scroll en la página
+                position: absolute -> se posiciona respecto de la ventana del navegador
+                position: sticky; -> inicialmente la posicion es relativ pero luego actua como un fixed cuando hacemos scroll
+                */
+                background-color: lightgray;
+                position: fixed;
+            }
+            ol {
+                list-style: none;
+                padding-left: 0;
+            }
+            li {
+                display: inline-block;
+                border-right: 1px solid grey;
+                padding: 3px 10px;
+                vertical-align: top;
+            }
+            li:last-child {
+                border: none;
+            }
+            li:hover {
+                background-color: black;
+            }
+            li:hover a {
+                font-weight: bold;
+                color: white;
+            }
+            li:hover a:active {
+                font-weight: bold;
+                color: lightcoral;
+            }
+            li ol {
+                display: none;
+            }
+            li:hover ol {
+                display: block;
+            }
+            li:hover ol li {
+                display: block;
+                background-color: white;
+            }
+            li:hover ol li a {
+                color: black;
+                font-weight: normal;
+            }
+            li:hover ol li:hover {
+                display: block;
+                background-color: lightgreen;
+            }
+            li:hover ol li:hover a {
+                color: grey;
+                font-weight: bold;
+            }
+            a:link {
+                color: aquamarine;
+                text-decoration: none;
+            }
+            a:visited {
+                color: aquamarine;
+            }
+            .azul {
+                color: blue;
+            }
+            .azul_claro {
+                color: rgb(79, 182, 241);
+            }
+            .verde {
+                color: rgb(0, 255, 0);
+            }
+            .rojo {
+                color: red;
+            }
+            .active {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <ol>
+                <li><a href="#"><i class="bi bi-pc-display verde"></i> System Zaragoza</a>
+                    <ol>
+                        <li><a href="#">System 1</a></li>
+                        <li><a href="#">System 2</a></li>
+                        <li><a href="#">System 3</a></li>
+                        <li><a href="#">System 4</a></li>
+                    </ol>
+                </li>
+                <li><a href="#"><i class="bi bi-google rojo"></i> Google</a></li>
+                <li class="active"><a href="#"><i class="bi bi-facebook azul"></i> Facebook</a></li>
+                <li><a href="#"><i class="bi bi-twitter azul_claro"></i> Twitter</a></li>
+            </ol>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec orci lobortis, tristique enim eu, volutpat lorem. In a magna bibendum, porta mauris in, volutpat enim. Pellentesque et venenatis elit, maximus posuere metus. Suspendisse potenti. Phasellus aliquet metus metus, sed rhoncus arcu pharetra eget. Mauris id ex scelerisque, dictum diam eget, pretium ex. Praesent eu tincidunt arcu. Sed id dapibus libero.</p>
+    </body>
+</html>

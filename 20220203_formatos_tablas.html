@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="es">
+        <title>Formatos de Tablas</title>
+        <style>
+            table, th, td {
+                border: 3px solid black;
+                /*border-collapse: collapse;*/
+                border-radius: 5px;
+                border-style: inset;
+                border-color: darkorange;
+                padding: 20px;
+            }
+            th {
+                background-color: lavender;
+            }
+            td {
+                background-color: azure;
+            }
+            #rojo {
+                background-color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Jugando con los tamaños</h2>
+        <table style="width: 50%;">
+            <caption>Tabla de trabajo con ejemplos</caption>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Edad</th>
+            </thead>
+            <tfoot>
+                <tr>
+                <td align="center" colspan="4">Esta es mi tabla</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Mario</td>
+                    <td>Buedo</td>
+                    <td id="rojo">Esquidor</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Jesús</td>
+                    <td>Chueca</td>
+                    <td>García</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Andrea</td>
+                    <td>Fernandez</td>
+                    <td>Villanueva</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
+

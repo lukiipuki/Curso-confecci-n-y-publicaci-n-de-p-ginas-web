@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="es">
+        <title>Ejercicio selectores</title>
+        <style>
+            /*estilo para poner roja la letra del párrafo 1 y 2*/
+            div p {
+                color: red;
+            }
+            /*estilo para cambiar el fondo del párrafo 1 a amarillo*/
+            div>p {
+                background-color: yellow;
+            }
+            /*estilo para poner el fondo azul al párrafo 3*/
+            div p.FondoAzul {
+                background-color: lightblue;
+            }
+            /*estilo para poner azul la letra del párrafo 4 y 5*/
+            div~p {
+                color: blue;
+            }
+            /*estilo para poner rosa el fondo del párrafo 4*/
+            div+p {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Párrafo 1 dentro del div</p>
+            <span><p>Párrafo 2 dentro del div</p></span>
+            <span><p class="FondoAzul">Párrafo 3 dentro del div</p></span>
+        </div>
+        <p>Párrafo 4 fuera del div</p>
+        <p>Párrafo 5 fuera del div</p>
+        <p class="FondoAzul">Párrafo 6</p>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8" lang="es">
+       <style>
+        /*selectores básicos*/
+           /*Selector por etiqueta*/
+           h1 {
+               color: aqua;
+           }
+           /*selector por id (solo debe haber una etiqueta con "x" id)*/
+           #id_1 {
+                color: blue;
+           }
+           /*selector por clases*/
+           .class_1 {
+               color: rgb(226, 43, 83);
+           }
+           /*selector aplicando a un tipo de etiqueta que tenga una clase aplicada*/
+           p.class_2 {
+               color: chartreuse;
+           }
+        /*selectores combinados*/
+           /*selector combinado en el que se aplica estilos a todos los elementos separados por comas*/
+           h1, p, table, tr, td, .class_1, #id_1{
+               font-family: Verdana;
+           }
+           /*selector descendiente: se aplica a todos los elementos que son descendentes del primero (todos los p que esten dentro del div en este caso)*/
+           div p {
+               background-color: cyan;
+           }
+
+            /*
+           <div>
+                <p>...</p> ---> Se aplica
+                <table>
+                    <tr><td><p>....</p></td></tr> ---> Se aplica
+                </table>
+                <p>...</p> ---> Se aplica
+            </div>
+            <p>...</p> ---> No se aplica
+            <p>...</p> ---> No se aplica
+            */
+
+           /*selector hijo: se aplica a todos los elementos que son "hijos directos" del primero*/
+           div>p {
+                background-color: pink;
+           }
+           
+            /*
+           <div>
+                <p>...</p> ---> Se aplica
+                <table>
+                    <tr><td><p>....</p></td></tr> ---> No se aplica
+                </table>
+                <p>...</p> ---> Se aplica
+            </div>
+            <p>...</p> ---> No se aplica
+            <p>...</p> ---> No se aplica
+            */
+
+           /*Selector de hermano adyacente: Se aplica a aquellos elementos que esten al mismo nivel que el anterior y están escritos inmediatamente después del primero (los que van después)*/
+           div+p {
+                color: royalblue;
+           }
+
+            /*
+           <div>
+                <p>...</p> ---> No aplica
+                <table>
+                    <tr><td><p>....</p></td></tr> ---> No aplica
+                </table>
+                <p>...</p> ---> No aplica
+            </div>
+            <p>...</p> ---> Se aplica
+            <p>...</p> ---> No se aplica
+            */
+
+           /*Selector de hermanos en general: se aplica a todos los elementos que están en el mismo nivel que el anterior (los que van después)*/
+           div~p {
+                background-color: rgb(102, 214, 181);
+           }
+
+            /*
+           <div>
+                <p>...</p> ---> No se aplica
+                <table>
+                    <tr><td><p>....</p></td></tr> ---> No se aplica
+                </table>
+                <p>...</p> ---> No se aplica
+            </div>
+            <p>...</p> ---> Se aplica
+            <p>...</p> ---> Se aplica
+            */
+       </style> 
+    </head>
+    <body>
+        <h1>Título 1</h1>
+        <h1 id="id_1">Título 1</h1>
+        <h1 class="class_1">Título 1</h1>
+        <h1 class="class_2">Título 1</h1> <!--No aplica la clase ya que es solo para la etiqueta p-->
+        <p class="class_2">Un párrafo random</p>
+        <div>
+            <p>Párrafo 1 dentro del div</p>
+            <p>Párrafo 2 dentro del div</p>
+            <table>
+                <tr>
+                    <td>
+                        <p>Párrafo 3 dentro de table, tr y td</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p>Párrafo 4 fuera del div</p>
+        <p>Párrafo 5 fuera del div</p>
+    </body>
+</html>
