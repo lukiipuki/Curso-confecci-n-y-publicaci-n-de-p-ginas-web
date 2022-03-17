@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="es">
+        <style>
+            /*Estilos de borde:
+            border -> se refiere a los 4 bordes
+            border-bottom; border-left; border-right; border-top; -> esfecifica cual de los 4 bordes se quiere modificar
+
+            sintaxis:
+            border: border-width border-style border-color
+
+            Ej -> border: 1px solid red; (pone los 4 bordes en color rojo con línea continua de 1px de grosor)
+
+            Si se si quiere cambiar solo una propiedad podemos hacer lo siguiente:
+            border-color: red; (se cambia solo el color a rojo de los 4 bordes)
+            */
+            table, tr {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid crimson;
+            }
+            th {
+                border: 1px solid royalblue;
+            }
+            td#initial {
+                border: initial;
+            }
+            /*Initial devuelve los valores por defecto de la propiedad border*/
+            td#inherit {
+                border: inherit;
+            }
+            /*Inherit otorga las propiedades de su "padre" (en este caso del <tr>)*/
+
+            /*Estilo de tamaños:
+            -Anchura -> siempre se adaptan a la celda de mayor anchura de contenido
+            width: auto; -> valor por defecto
+            
+            Unidades de medida absoluta
+            width: "x"px; -> unidades en px aunque (se puede usar cm, mm, in, px, pt y pc)
+
+            Unidades de medida relativas
+            width: "x"%; -> porcentaje de anchura respecto a su "padre" (% -> relativo a su contenedor; em -> relativo al tamaño de la fuente; ex -> relativo a la altura de la letra x de la fuente usada; ch -> relativa a la anchura del 0; vw -> relativa al 1% de la anchura del viewport(es la ventana del navegador donde se esta visualizando la página); vh (relativa al 1% de la altura del viewport); wmin/vmax -> rlativo al 1% de la menor/mayor medida del viewport))
+            */
+            table {
+                width: 75%;
+            }
+
+            /*Espaciados:
+            todos los elementos de bloque tiene 3 espaciados:
+
+            -margin: es el espacio alrededor del elemento por la parte externa de su borde
+            -padding: es el espacio alrededor del elemento por la parte interna de su borde
+            -border-spacing: espaciado entre celda
+
+            OJO -> width: 100px; padding: 25px 50px; -> anchura total= 50px + 100px + 50 px
+                -> h1{margin:50px;}
+                   h2{margin:25px;} -> En vertical los márgenes colapsan y se deja el de mayor valor, en este caso 50px
+            */
+            table, tr, td {
+                margin: 0px;
+                padding: 0px;
+                border-spacing: 0px;
+                border-collapse: collapse;
+            }
+            table#bonita, table#bonita tr, table#bonita td {
+                margin: 0px; /*los 4 margina 0 px*/
+                padding: 5px 15px; /*los padding arriba y abajo 5px y los derecha e izquierda 15px (si pusiesemos padding: 5px 10px 15px 20px; el orden sería: arriba, derechaa, abajo, izquierda)*/
+                border-collapse: collapse;
+                border-spacing: 0px;
+            }
+            table#bonita {
+                border: 2px solif orange;
+            }
+            table#bonita th {
+                background-color: orange;
+                color: white;
+            }
+            table#bonita td {
+                border: initial;
+                border-bottom: 1px solid #999;
+            }
+            table#bonita tr:nth-child(even) {
+                background-color: gainsboro;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>Tabla de trabajo con ejemplos</caption>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Edad</th>
+            </thead>
+            <tfoot>
+                <tr>
+                <td>Esta es mi tabla</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Mario</td>
+                    <td>Buedo</td>
+                    <td id="inherit">Esquidor</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Jesús</td>
+                    <td id="initial">Chueca</td>
+                    <td>García</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Andrea</td>
+                    <td>Fernandez</td>
+                    <td>Villanueva</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Tabla bonita</h2>
+        <table id="bonita">
+            <caption>Tabla de trabajo con ejemplos</caption>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Edad</th>
+            </thead>
+            <tfoot>
+                <tr>
+                <td>Esta es mi tabla</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Mario</td>
+                    <td>Buedo</td>
+                    <td id="inherit">Esquidor</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Jesús</td>
+                    <td id="initial">Chueca</td>
+                    <td>García</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Andrea</td>
+                    <td>Fernandez</td>
+                    <td>Villanueva</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

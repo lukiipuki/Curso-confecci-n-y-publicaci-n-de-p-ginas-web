@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="es">
+        <title>Estilos de texto y fuente</title>
+
+        <!--Vamos a enlazar una fuente almacenada en los servidores de Google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+
+        <style>
+            body {
+                background-color: lightslategray;
+            }
+            /*Alineación de texto*/
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: left;
+            }
+            p#p1 {
+                text-align: right;
+            }
+            p#p2 {
+                text-align: justify;
+            }
+            p#p3 {
+                text-align: justify;
+                text-align-last: center;
+            }
+            p#p4 {
+                text-align: justify;
+                text-align-last: right;
+            }
+            p#p5 {
+                /*word-break: break-all;*/ 
+                word-wrap: break-word; /*Ejemplo de aaaaaaaaaa.......*/
+            }
+            p#p1 img {
+                vertical-align: baseline;
+            }
+            /*Decoración de texto
+            text-decoration
+                text-decoration-line
+                    (donde es la decoración): underline, overline, line-through
+                text-decoration-color
+                text-decoration-style
+                    (que forma tiene la decoración): solid, double, dotted, dashed, wavy
+                text-decoration-thickness
+            */
+            h2{
+                text-decoration: underline red double;
+            }
+            /*Transformaciones de texto*/
+            h1 {
+                text-transform: uppercase;
+            }
+            p#p1 {
+                text-transform: capitalize;
+            }
+            /*Espaciados de texto*/
+            p#p2 {
+                text-indent: 50px; /*Sangría de la primera línea*/
+            }
+            p#p3 {
+                letter-spacing: 5px;
+            }
+            p#p4 {
+                letter-spacing: -1px;
+            }
+            p#p5 {
+                word-spacing: 5px;
+            }
+            p#p6 {
+                word-spacing: -2px;
+                line-height: 3;     /*altura de la línea de texto, que la podemos indicar de la siguiente forma
+                                    - normal -> poner la altura por defecto (tamaño de la fuente)
+                                    -valor númerico -> es el multiplicador al tamaño de la fuente
+                                    -valor fijo expresado en px, pt, cm, etc.
+                                    -valor en % respecto al tamaño de la fuente
+                                    */
+            }
+            h1 {
+                text-shadow: 2px 2px 5px lightgreen; /*desplazamiento horizontal, desplazamiento vertical, difuminado/desenfoque (blur), color*/
+            }
+            /*Tipografía:
+            "font" modifica la tipografía que empleamos. Hay que recordar que hay, principalmente 2 tipos, las letras con o sin serifa
+            Las tipografías con serifa más habituales son: Times New Roman, Georgia, Garamond (recomendadas para impresión)
+            Las tipografías sin serifa más habituales son: Arial, Verdana, Helvetica (recomendadas para visualizar en pantalla)
+            */
+            p#p1 {
+                font-family: OpenSans, Calibri, Verdana, Arial, sans-serif; 
+            /*Importante emplear una letra que tengamos garantizado que el navegador reconocerá, ya  que podría no estar intalado. Para evitar esto, definimos las distintas fuentes que debe emplear en caso de que la que hayamos especificado no este disponible*/
+            }
+            p#p2 {
+                font-family: Roboto, sans-serif;
+            }
+            @font-face {
+                font-family: MiFuenteEspecial;
+                src: url(../Roboto-Medium.ttf), url(../Roboto-Bold.ttf);
+                font-weight: bold;
+            }
+            /*Modificaciones de estilo*/
+            p#p2 {
+                font-style: italic; /*Modifica la inclinación de la letra: normal | italic | oblique*/
+            }
+            p#p3 {
+                font-weight: bold;
+            /*Modifica el "grosor" de la letra: normal | bold | bolder | lighter | number (400 equivale a normal y 700 a bold)*/
+            }
+            p#p4 {
+                font-size: x-large;
+            /*el tamaño de la fuente se puede indicar en:
+            -px
+            -em -> es en relación al tamaño de la fuente que por defecto es 16 (si 1em = 16px -> 3em = 48px)*/
+            }
+            p#p5 {
+                font-variant: small-caps;
+            }
+            p#p6 {
+                font-family: MiFuenteEspecial, sans-serif;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estilos de texto y fuente</h1>
+        <h2>Lorem Ipsum</h2>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis nisl ac fringilla placerat. Nulla sed lectus vel augue eleifend viverra et id nunc. Ut mattis mauris ipsum, a dignissim dui efficitur sit amet. Nunc mollis iaculis eros vitae congue. Nam accumsan, quam eget rhoncus mollis, justo libero mattis leo, a euismod tortor odio non dui. Proin tempor sapien elit, sed aliquam sem luctus ac. Nulla elementum viverra eros. In fermentum et nibh rhoncus tempus. Donec at metus semper, auctor mauris et, dapibus neque. Proin id quam ultrices, <img src="../imagenes/2.png">condimentum lorem quis, sodales massa. Mauris ligula dui, vehicula non ligula sed, feugiat ultrices magna. Phasellus cursus neque nunc, sit amet gravida neque sodales nec. Fusce lacus lorem, vehicula vel vehicula a, cursus eu nulla. In hac habitasse platea dictumst. Maecenas quis cursus lacus, vitae elementum mauris.</p>
+
+        <p id="p2">Nam dignissim non dolor et sodales. Maecenas vehicula placerat ante eu suscipit. Aenean quis lectus imperdiet, efficitur metus eget, ultrices quam. Phasellus semper nisi sed rutrum tempus. Aenean iaculis sapien at dolor posuere, id congue est bibendum. Aliquam erat volutpat. Vivamus id nulla orci.</p>
+
+        <p id="p3">Vestibulum quis justo lacus. Aenean lorem mauris, egestas ac enim et, hendrerit placerat tellus. Ut ut luctus est, a fermentum urna. Praesent sed nunc non diam scelerisque pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a bibendum mi. Aenean mollis venenatis ligula in pulvinar. Praesent sagittis scelerisque risus nec malesuada. Curabitur tempus vitae dui ut pulvinar.</p>
+
+        <p id="p4">Sed ac risus a ante accumsan tincidunt vitae vel lectus. Fusce bibendum eget felis a lobortis. Mauris auctor tempor finibus. Nunc nec aliquam eros. Duis consequat elit sit amet diam dictum tincidunt. Nam mattis felis at elit pretium, accumsan tristique eros dapibus. Nam ac semper turpis. Mauris mauris nibh, facilisis ut vestibulum a, pellentesque eu urna. In blandit lacinia ipsum sit amet pulvinar. Morbi rutrum tortor nec lacus vestibulum, ut molestie sapien pharetra.</p>
+
+        <p id="p5">Vestibulum ut justo sed felis congue euismod ullamcorper quis sem. Proin eget vestibulum enim, commodo tristique sapien. Etiam hendrerit velit sit amet porttitor tempor. Nullam diam tortor, scelerisque ut volutpat id, consectetur et ligula. Nulla sit amet tortor nibh. Donec est nibh, efficitur sed ultricies sit amet, tincidunt vel arcu. Aliquam erat volutpat. Suspendisse ultrices convallis odio, vitae volutpat felis tristique et. Vestibulum ornare enim augue, at finibus mi bibendum vel. Suspendisse tincidunt suscipit erat in scelerisque. Donec vitae risus eu purus vehicula faucibus ut at libero.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+        <p id="p6">Nunc molestie auctor velit in ultrices. Quisque ut tortor risus. Sed interdum arcu in eros auctor feugiat. Ut ut mi placerat, ullamcorper erat quis, blandit nunc. Nullam id purus turpis. Vestibulum ac libero id augue varius eleifend eu ut nibh. Duis pulvinar arcu tellus, at ornare dolor gravida at. Etiam laoreet venenatis velit, vel mollis magna vulputate sed.</p>
+    </body>
+</html>

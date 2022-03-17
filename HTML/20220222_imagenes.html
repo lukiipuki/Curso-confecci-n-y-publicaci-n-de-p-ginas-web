@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Ejemplo de uso del elemento picture</h1>
+        <p>Redimensionar la para cargar distintas imagenes</p>
+        <!--El elemento <picture> se emplea para aprovechar el ancho de banda y tambien para poder añadir imagenes de todos los formatois para que sea compatible con todo tipo de navegadores y dispositivos. Nosotros establecemos el orden de preferencia-->
+        <picture>
+            <source media="(min-width:650px)" srcset="../imagenes/1.jpg"><!--Siempre poner alt-->
+            <source media="(min-width:465px)" srcset="../imagenes/2.png">
+            <img src="../imagenes/3.jpg" alt="pingüinos">
+        </picture>
+    </body>
+</html>

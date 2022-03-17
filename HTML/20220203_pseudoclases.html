@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="es">
+        <title>Pseudoclases</title>
+        <style>
+             /* Pseudoclases:
+            selector:pseudoclase {
+                propiedad:valor;
+            }
+            */
+            h1:hover {
+                color: red;
+            }
+            /*La pseudoclase hover hace que cuando pasemos el ratón por encima de h1, este cambie su color a rojo*/
+            div p:first-child {
+                color: blue;
+            }
+            /*En este caso first-child hace que los párrafos que sean primer descendente de su bloque dentro del div sean de color azul*/
+            div p:last-child {
+                color: yellow;
+            }
+            div p:nth-child(2) {
+                color: green;
+            }
+            div p:nth-last-child(2) {
+                color: purple;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:link {
+                color: chartreuse;
+            }
+            a:visited {
+                color: coral;
+            }
+            a:hover {
+                color: cornflowerblue;
+            }
+            a:active {
+                color: crimson;
+            }
+            /*¡IMPORTANTE!: en las pseudoclases de los enlaces, hover debe ir detras de link y visited y active debe ir después de hover*/
+            div table {
+                display: none;
+            }
+            div:hover table {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="">Esto es un enlace</a><!--Por defecto el enlace tendrá un formato fijo (color azul y subrayado). Solo se puede cambiar con CSS-->
+        <h1>Título 1</h1>
+        <h1>Título 1</h1>
+        <h1>Título 1</h1>
+        <h1>Título 1</h1>
+        <p>Un párrafo random</p>
+        <div>
+            <p>Párrafo 1 dentro del div</p>
+            <p>Párrafo 2 dentro del div</p>
+            <p>Otro párrafo</p>
+            <table>
+                <tr>
+                    <td>
+                        <p>Párrafo 3 dentro de table, tr y td</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p>Párrafo 4 fuera del div</p>
+        <p>Párrafo 5 fuera del div</p>
+    </body>
+</html>

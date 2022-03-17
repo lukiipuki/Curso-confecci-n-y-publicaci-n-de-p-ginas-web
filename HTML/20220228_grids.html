@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formación destacada</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/grid.css">
+        <style>
+            #contenido {
+                width: 960px;
+                margin: 0 auto;
+                font-family: 'Open Sans', sans-serif;
+            }
+            h2 {
+                text-align: center;
+                color: rgb(137, 184, 45);
+            }
+            .imgGaleria {
+                position: relative;
+                overflow: hidden;
+            }
+            .mes {
+                background-color: #9DBB1E;
+                font-weight: bold;
+                margin-top: 10px;
+                font-size: 12px;
+                position: absolute;
+                color: white;
+            }
+            .tituloCurso {
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                bottom: -80px;
+                color: white;
+                font-weight: bold;
+                padding: 5px;
+                transition: 0.5s; 
+                /*Con "transition" podemos indicar el tiempo a emplear para pasar de un valor a otro. Este tiene ir junto que el valor inicial. Podemos especifical la velocidad de transicion para varios elemnetos (ej: transition: bottom 1s, color 3s;).
+                
+                A su vez, transition tienen sus propiedades. Por ejemplo, para configurar que "aceleración" tendrá la transición, tenemos "transition-timing-function" con sus correspondientes valores (consultar W3C para más)*/
+            }
+            p {
+                margin: 0;
+                padding: 10px;
+            }
+            .info {
+                font-size: 12px;
+            }
+            #overflow {
+                display: block;
+                max-height: 45px;
+                overflow: hidden; /*Corta el texto, o oculta, que exceda la altura máxima establecida*/
+                text-overflow: ellipsis; /*Pone tres puntos (...) si el texto no cabe en el espacio establecido*/
+            }
+            img {
+                transition: 1s;
+            }
+            .imgGaleria:hover img {
+                transform: scale(1.1);
+            }
+            .imgGaleria:hover .tituloCurso {
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenido">
+            <div id="header" class="row">
+                <h2>FORMACIÓN DESTACADA</h1>
+            </div>
+            <div id="fromación">
+                <div id="fila1" class="row">
+                    <a href="http://google.com">
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <img src="../imagenes/20220228/1.jpg" class="col-12">
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>PROGRAMA AVANZADO EN MARKETING Y ESTRATEGIA DIGITAL - COMM111PO</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/2.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>FACTURA DIGITAL</p>
+                            <hr>
+                            <p id="overflow" class="info">210H Gratuito Dirigido prioritariamente a trabajadores desempleados.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/3.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>GESTIÓN DE CONTENIDOS DIGITALES</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/4.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>PROGRAMA AVANZADO EN MARKETING Y ESTRATEGIA DIGITAL - COMM111PO</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fila2">
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/5.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>PROGRAMA AVANZADO EN MARKETING Y ESTRATEGIA DIGITAL - COMM111PO</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/6.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>PROGRAMA AVANZADO EN MARKETING Y ESTRATEGIA DIGITAL - COMM111PO</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/7.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>FEBRERO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>PROGRAMA AVANZADO EN MARKETING Y ESTRATEGIA DIGITAL - COMM111PO</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-s-12 col-md-6 col-lg-6 col-xl-3 imgGaleria">
+                        <a href="#"><img src="../imagenes/20220228/8.jpg" class="col-12"></a>
+                        <div class="mes">
+                            <p>MARZO</p>
+                        </div>
+                        <div class="tituloCurso">
+                            <p>PROGRAMA AVANZADO EN MARKETING Y ESTRATEGIA DIGITAL - COMM111PO</p>
+                            <hr>
+                            <p class="info">90H Gratuito Dirigido prioritariamente a trabajadores ocupados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

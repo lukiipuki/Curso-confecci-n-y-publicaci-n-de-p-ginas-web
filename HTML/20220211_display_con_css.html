@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Display en CSS</title>
+        <style>
+            /*Existen 2 tipos de elementos segun su forma de verse. Por un lado tenemos los que ocupan todo el espacio (ancho) disponible y por tanto no podemos poner nada a su lado.
+                display: block (p, h1-h6, header, footer, section,...)
+                
+            Por otro lado tenemos los que no se comportan de esa forma.
+                display: inline (i, b, a, img, span,...)
+            */
+
+            p {
+                width: 50%;
+            }
+            h3 {
+                display: inline;
+            }
+            /*
+            display:none -> hace que el elemento desaparezca
+            */
+            p#p2 {
+                display: none;
+            }
+            h2:hover + p#p2{
+                display: block;
+            }
+            /*Otra forma de ocultar es con visibility*/
+            p#p1 {
+                visibility: hidden;
+            }
+            /*La diferencia entre display:none y visibility:hidden es que el primero "elimina" el elemento de la visualización y por tanto no ocupa espacio en la pantalla mientras que el segundo simplemente lo oculta pero sigue estando allí y por tanto, el espacio sigue estando ocupado*/
+            .inline_block {
+                width: 25%;
+                display: inline-block;
+                border: 1px solid;
+                text-align: justify;
+                padding: 5px;
+                float: right; /*Modifica la dirección en la que se colocan los elementos flotantes (bloques)*/
+            }
+            .ultimo {
+                clear: both;
+            }
+            /*Clear:both sirve para que no ocupe el espacio restante a la derecha de los párrafos anteriores*/
+        </style>
+    </head>
+    <body>
+        <h3>Título</h3>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis arcu. In hac habitasse platea dictumst. Quisque ligula justo, varius in ipsum eget, blandit porta sem. Phasellus consequat urna a faucibus venenatis. Nulla facilisi. Morbi pretium dolor nec erat bibendum, a mattis nisi elementum. Duis in ligula ornare, condimentum enim a, cursus enim.</p>
+        <h2>Elemento que tiene que desaparecer</h2>
+        <p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis arcu. In hac habitasse platea dictumst. Quisque ligula justo, varius in ipsum eget, blandit porta sem. Phasellus consequat urna a faucibus venenatis. Nulla facilisi. Morbi pretium dolor nec erat bibendum, a mattis nisi elementum. Duis in ligula ornare, condimentum enim a, cursus enim.</p>
+        <p class="inline_block">1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis arcu. In hac habitasse platea dictumst. Quisque ligula justo, varius in ipsum eget, blandit porta sem. Phasellus consequat urna a faucibus venenatis. Nulla facilisi. Morbi pretium dolor nec erat bibendum, a mattis nisi elementum. Duis in ligula ornare, condimentum enim a, cursus enim.</p>
+        <p class="inline_block">2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis arcu. In hac habitasse platea dictumst. Quisque ligula justo, varius in ipsum eget, blandit porta sem. Phasellus consequat urna a faucibus venenatis. Nulla facilisi. Morbi pretium dolor nec erat bibendum, a mattis nisi elementum. Duis in ligula ornare, condimentum enim a, cursus enim.</p>
+        <p class="inline_block">3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis arcu. In hac habitasse platea dictumst. Quisque ligula justo, varius in ipsum eget, blandit porta sem. Phasellus consequat urna a faucibus venenatis. Nulla facilisi. Morbi pretium dolor nec erat bibendum, a mattis nisi elementum. Duis in ligula ornare, condimentum enim a, cursus enim.</p>
+        <p class="ultimo">4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis arcu. In hac habitasse platea dictumst. Quisque ligula justo, varius in ipsum eget, blandit porta sem. Phasellus consequat urna a faucibus venenatis. Nulla facilisi. Morbi pretium dolor nec erat bibendum, a mattis nisi elementum. Duis in ligula ornare, condimentum enim a, cursus enim.</p>
+    </body>
+</html>

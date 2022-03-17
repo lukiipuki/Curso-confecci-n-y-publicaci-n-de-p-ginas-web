@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="es">
+        <title>Iconos</title>
+        <!--Para emplear iconos será mejor no emplear <img> por temas de carga de la página. La ventaja que tienen estos iconos es que están en formato texto. Esto implica que por un lado, no pesan nada, y por otro que la calidad con la que se ven estos no se verá afectada por la resolución de pantalla. Si que es cierto que hay que tener en cuenta qui si recurrimos a la base de iconos de una web, corremos el riesgo de que algún día el icono no este ya disponible, como en el caso de las fuentes obtenidas a través de google.-->
+
+        <!--Podemos insertar el archivo CSS de la página web que contienen todos los iconos y luego insertarlos directamente en el body con el codigo de cada icono-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"><!--CSS de los iconos al final de la página-->
+
+        <!--Iconos FontAwesome:-->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <!--Iconos de Google:-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+            p#p1 {color: red; font-size: 1.5em;}/*El color del icono tambien se cambia*/
+            .azul {color: lightskyblue;}
+        </style>
+    </head>
+    <body>
+        <p>Iconos de FontAwesome</p>
+        <i class="fas fa-band-aid"></i>
+        <i class="fas fa-cat"></i>
+        <i class="fas fa-dragon"></i>
+        <i class="far fa-clock"></i>
+        <i class="fas fa-clock"></i>
+        <hr>
+        <p>Iconos de Google</p>
+        <span class="material-icons">cloud_sync</span>
+        <hr>
+        <i class="bi bi-telegram azul"></i>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper enim eu mollis semper. Pellentesque auctor finibus tortor a gravida. Donec sit amet fermentum diam. Fusce et molestie eros, imperdiet feugiat felis. <i class="bi bi-broadcast-pin"></i>Proin tincidunt nulla nec imperdiet condimentum. Nunc blandit lacinia neque, non ultrices mauris vestibulum ut. Quisque facilisis ultricies leo nec consequat. Praesent porta non mi ut placerat. Ut dui metus, vestibulum at congue in, bibendum eget lacus.</p>
+
+        <p id="p2">Sed eu augue vehicula, mattis lorem eget, euismod ex. Etiam sed imperdiet urna. Morbi in magna scelerisque, vulputate augue <i class="bi bi-lightning-fill" style="color: orange;"></i> vitae, ultrices ante. Cras a luctus urna. Sed commodo nibh id efficitur tempus. Pellentesque ac rhoncus mi. Proin ante ex, pharetra et lorem at, laoreet ultricies mauris. Proin ligula enim, tristique non ex a, viverra aliquet massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed iaculis dignissim sapien, sed tempus orci rhoncus ut. Nullam luctus, ipsum ut sodales tincidunt, purus lacus congue lorem, ac varius augue tellus et tortor.</p>
+
+        <p id="p3">Sed vitae aliquet nisi. Quisque arcu felis, facilisis eget risus sed, cursus condimentum nisl. Maecenas diam dui, accumsan a lacus quis, bibendum egestas diam. Duis interdum neque dapibus nunc pharetra tincidunt. Ut eu vehicula augue. Vestibulum porttitor dignissim risus iaculis ullamcorper. Maecenas sit amet magna odio.</p>
+
+        <p id="p4">Aenean maximus neque in luctus blandit. Sed pharetra purus a diam facilisis, ac aliquam purus faucibus. Nam condimentum maximus congue. Proin quam elit, faucibus vitae nunc id, lobortis consequat dui. Nunc sodales nisl orci, ut iaculis orci commodo ut. Morbi dictum non purus eget molestie. Vivamus efficitur ac purus eu mollis. Etiam porta pulvinar neque, vitae consequat orci semper ut. Aliquam ac tempus leo, et lacinia odio. Curabitur lobortis nunc et velit placerat, nec pretium ante volutpat.</p>
+
+        <p id="p5">Sed a venenatis est. Mauris ac ligula turpis. Nunc a pharetra erat, quis tristique turpis. Maecenas a enim ac urna maximus interdum in ac est. Cras ante nibh, porttitor nec ex et, fringilla porttitor mi. Sed pretium ante sed neque blandit vulputate. Nam tristique et mauris consectetur commodo.</p>
+
+        <p id="p6">Donec sit amet aliquet massa. Fusce volutpat eros sed elit commodo, vitae cursus risus rhoncus. Vivamus finibus maximus turpis vitae viverra. Donec vulputate feugiat mi eget lobortis. Pellentesque placerat in ligula ac pulvinar. Vivamus eu suscipit nulla. Mauris tincidunt porttitor vulputate. Nullam porttitor magna purus, a accumsan massa tincidunt non. Sed imperdiet mi et aliquet pharetra. Sed bibendum nunc eu orci pulvinar, et fringilla nunc aliquam. Nulla convallis quis lectus eget lobortis. Donec viverra augue at dapibus volutpat.</p>
+        <!--Otra opción es copiar el SVG correspondiente-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+        </svg>
+    </body>
+</html>
